@@ -1,0 +1,21 @@
+<div class="user-detail">
+	<h4> Profile Details</h4>
+	<p>
+		<label>First Name:</label> <span ng-if="!vm.isEditable">{{currentUser.firstName}}</span>
+		<input ng-if="vm.isEditable" type="text" name="firstName" ng-model="vm.currentUser.firstName" />
+	</p>
+	<p>
+		<label>Last Name:</label> <span ng-if="!vm.isEditable">{{currentUser.lastName}}</span>
+		<input ng-if="vm.isEditable" type="text" name="lastName" ng-model="vm.currentUser.lastName" />
+	</p>
+	<p>
+		<label>Email Id:</label> <span>{{currentUser.emailId}}</span>
+	</p>
+	<p>
+		<label>Contact No:</label> <span ng-if="!vm.isEditable">{{currentUser.contactNo}}</span>
+		<input ng-if="vm.isEditable" type="text" name="contactNo" ng-model="vm.currentUser.contactNo" />
+	</p>
+	<a ng-if="!vm.isEditable" href="javascript:void(0)" ng-click="vm.editProfile()">Edit Profile</a>
+	<button ng-if="vm.isEditable" class="btn btn-primary" ng-click="vm.updateUser()">save</<button>
+	<button ng-if="vm.isEditable" class="btn btn-primary" ng-click="vm.cancelEditProfile()">Cancel</<button>
+</div>

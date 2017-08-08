@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="contactApp">
+<head>
+<title>Contact List App</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/default.css">
+</head>
+<body>
+	<div ng-if="userName" ng-include="'partials/header.html'"></div>
+	<div ui-view></div>
+	<div ng-if="userName" ng-include="'partials/footer.html'"></div>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+ <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-resource.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.7/ngStorage.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/auth0/angular-jwt/master/dist/angular-jwt.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-base64/2.0.5/angular-base64.js"></script>
+<script src="app.js"></script>
+<script type="text/javascript" src="/routing.js"></script>
+<!-- SERVICES -->
+<script type="text/javascript" src="/services/AuthService.js"></script>
+<script type="text/javascript" src="/services/UserService.js"></script>
+<!-- CONTROLLERS -->
+<script type="text/javascript" src="/controllers/MainController.js"></script>
+<script type="text/javascript" src="/controllers/UserController.js"></script>
+</body>
+</html>
+
+	
